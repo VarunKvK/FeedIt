@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import HomeArtContainer from "../components/HomeArtContainer";
 import Masonry from 'react-masonry-css';
 
 const breakPoints={
@@ -43,6 +42,7 @@ function Search() {
           <img
             src={`http://localhost:8000/uploads/art/${data.art}`}
             className="h-[30rem] object-cover absolute w-[20rem] md:w-[15rem] rounded-2xl"
+            alt={data.title}
           />
           <div className="bg-[#1e1e1e41] opacity-[0%] hover:opacity-[100%] h-[30rem] relative w-[20rem] md:w-[15rem] rounded-2xl transition-opacity duration-100 ease-in">
             <h1 className="p-4 text-white">{data.title}</h1>

@@ -15,7 +15,7 @@ function UserPage() {
     axios.get("/userPage/" + profileId).then((res) => {
       getProfile(res.data);
     });
-  }, [id]);
+  }, [profileId]);
   return (
     <div className="w-full h-screen">
       <div className="flex justify-center w-full h-[47%] relative">
