@@ -48,7 +48,13 @@ const searchRoute=require("./routes/searchRoute")
 
 
 //Database Connection
-mongoose.connect(process.env.MONGOOSE_URL)
+mongoose.connect(process.env.MONGOOSE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((err) => {
+  console.error('Error connecting to MongoDB:', err);
+});
 
 
 //Routes
