@@ -16,7 +16,7 @@ import Art from "./pages/Art";
 import UserPage from "./pages/UserPage";
 import Search from "./pages/Search";
 
-axios.defaults.baseURL="http://localhost:8000"
+axios.defaults.baseURL="https://your-render-backend-url.com"
 axios.defaults.withCredentials=true
 
 function App() {
