@@ -19,7 +19,6 @@ const corsOptions = {
   },
 };
 
-app.use(cors(corsOptions));
 
 //APP||Port
 const app=express()
@@ -30,6 +29,7 @@ const salt=bcrypt.genSaltSync(10)
 
 
 //App Uses
+app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 app.use(express.json())
