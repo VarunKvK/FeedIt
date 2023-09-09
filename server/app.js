@@ -10,7 +10,7 @@ const bcrypt=require("bcrypt")
 // const allowedOrigins = ['https://feedit.netlify.app'];
 
 const corsOptions = {
-  origin:"https://feedit.netlify.app",
+  origin:true,
    credentials: true
 };
 
