@@ -21,8 +21,13 @@ loginRoute.post("/login",async(req,res)=>{
       const passwordMatch=bcrypt.compareSync(PASSWORD,userExists.password)
       if(passwordMatch){
          jwt.sign({id:userExists._id,username:userExists.username,email:userExists.email},jwtSecret,{},async(err,token)=>{
-            if(err) throw (err);
-            res.cookie("Token",token).json(userExists)
+            if (err) {
+               console.error('Error signing JWT:', err);
+               res.status(500).json({ error: 'Internal Server Error' });
+             } else {
+               res.cookie('Token', token).json(userExists);
+             }
+             console.log(userExists,token,jwtSecret)
          })
       }
       else{
