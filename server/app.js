@@ -17,7 +17,7 @@ const corsOptions = {
 
 //APP||Port
 const app=express()
-const Port=process.env.PORT
+const Port=process.env.PORT||8000
 
 //Password Encryptor
 const salt=bcrypt.genSaltSync(10)
