@@ -13,6 +13,7 @@ const jwtSecret = process.env.JWTSECRET;
 createprofileRoute
   .route("/createprofile")
   .get(async (req, res) => {
+    console.log("Created Profile")
     const { Token } = req.cookies;
     jwt.verify(Token, jwtSecret, {}, async (err, data) => {
       if (data) {
