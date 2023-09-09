@@ -21,6 +21,7 @@ function Home() {
   useEffect(() => {
     axios.get("/createprofile").then((res) => {
       getUserInput(res.data[0]);
+      console.log(res)
     });
   }, [user]);
 
@@ -28,7 +29,7 @@ function Home() {
     axios.get("/home").then((res) => {
       const randomArt = shuffleArray(res.data);
       setArt(randomArt);
-      // console.log(res.data)
+      console.log(res)
     });
   }, []);
   if (!ready) {
