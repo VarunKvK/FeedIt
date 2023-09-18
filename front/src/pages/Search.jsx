@@ -52,7 +52,7 @@ function Search() {
           </div>
           <div className="flex items-center mt-2">
             <div className="h-[2rem] w-[2rem] rounded-full shadow-lg">
-              <img src={`http://localhost:8000/uploads/profile/${data.owner.profilephotos}`} alt="" className="h-full object-cover rounded-full shadow-lg w-full" />
+              <img src={`https://feeditapp.onrender.com/uploads/profile/${data.owner.profilephotos}`} alt="" className="h-full object-cover rounded-full shadow-lg w-full" />
             </div>
             <div className="ml-2">
               <p>{data.owner.username}</p>
