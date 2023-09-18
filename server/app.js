@@ -7,12 +7,19 @@ const cookieParser=require("cookie-parser")
 const mongoose=require("mongoose")
 const bcrypt=require("bcrypt")
 
-// const allowedOrigins = ['https://feedit.netlify.app'];
+const allowedOrigins = ['https://feedit.netlify.app'];
 
 const corsOptions = {
-  origin:true,
-   credentials: true
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, 
 };
+
     
 
 //APP||Port
