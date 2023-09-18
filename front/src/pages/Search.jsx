@@ -40,7 +40,7 @@ function Search() {
         <Link to={`art/${data.title}/${data._id}`}>
         <div className="shadow-lg h-[30rem] w-[20rem] md:w-[15rem] rounded-2xl cursor-pointer">
           <img
-            src={`http://localhost:8000/uploads/art/${data.art}`}
+            src={`https://feeditapp.onrender.com/uploads/art/${data.art}`}
             className="h-[30rem] object-cover absolute w-[20rem] md:w-[15rem] rounded-2xl"
             alt={data.title}
           />

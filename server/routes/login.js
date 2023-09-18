@@ -27,7 +27,6 @@ loginRoute.post("/login",async(req,res)=>{
              } else {
                res.cookie('Token', token, { httpOnly: true, secure: true }).json(userExists);
              }
-             console.log(userExists,token,jwtSecret)
          })
       }
       else{

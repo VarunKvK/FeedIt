@@ -13,9 +13,7 @@ function ResponsiveNav({ setclose, open, setmenuclose, Logout }) {
       getUserInput(res.data[0])
     })
   },[user])
-  if (!user) {
-    return <></>;
-  }
+
   return (
     <div>
       <div

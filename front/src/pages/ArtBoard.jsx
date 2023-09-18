@@ -44,13 +44,13 @@ function ArtBoard() {
       });
     }
   },[]);
-  if (!ready) {
-    return (
-      <div className="mt-12">
-        <Loader />
-      </div>
-    );
-  }
+  // if (!ready) {
+  //   return (
+  //     <div className="mt-12">
+  //       <Loader />
+  //     </div>
+  //   );
+  // }
 
   function getInput(e) {
     e.preventDefault();
@@ -159,7 +159,7 @@ function ArtBoard() {
                 {input?.art?.length > 0 ? (
                   <div className="h-[30rem] sm:h-full rounded-lg shadow-lg relative">
                     <img
-                      src={`http://localhost:8000/uploads/art/${input.art}`}
+                      src={`https://feeditapp.onrender.com/uploads/art/${input.art}`}
                       className="object-cover w-full rounded-lg h-full"
                       alt={input.art}
                     />

@@ -9,13 +9,13 @@ function UploadedArt({ Art,idValue }) {
   const {id}=useParams()
   const { ready } = useContext(UserContext);
   const [menu, setmenu] = useState(false);
-  if (!ready) {
-    return (
-      <div className="">
-        <Loader />
-      </div>
-    );
-  }
+  // if (!ready) {
+  //   return (
+  //     <div className="">
+  //       <Loader />
+  //     </div>
+  //   );
+  // }
 
   function DeletePost(){
     axios.delete("/newArtboard/"+idValue)
@@ -25,7 +25,7 @@ function UploadedArt({ Art,idValue }) {
   return (
     <div className="h-[25rem] relative w-[18rem] bg-[#D83449] rounded-xl cursor-pointer mb-8" >
       <img
-        src={`http://localhost:8000/uploads/art/${Art.art}`}
+        src={`https://feeditapp.onrender.com/uploads/art/${Art.art}`}
         className="h-full object-cover absolute w-[18rem] rounded-xl "
       />
       <div className="bg-[#1e1e1e41] opacity-[0%] hover:opacity-[100%] h-[25rem] relative w-[18rem] rounded-xl transition-opacity duration-100 ease-in">

@@ -94,7 +94,7 @@ function NavBar() {
                 <img
                   className="object-cover h-[3rem] w-[3rem] rounded-full flex justify-center items-center"
                   src={
-                    "http://localhost:8000/uploads/profile/" +
+                    "https://feeditapp.onrender.com/uploads/profile/" +
                     userInput.profilephotos
                   }
                 />

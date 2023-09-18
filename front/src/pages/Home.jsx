@@ -32,13 +32,13 @@ function Home() {
       console.log(res)
     });
   }, []);
-  if (!ready) {
-    return (
-      <div className="mt-12">
-        <Loader />
-      </div>
-    );
-  }
+  // if (!ready) {
+  //   return (
+  //     <div className="mt-12">
+  //       <Loader />
+  //     </div>
+  //   );
+  // }
   return (
     <div>
       <div className="mt-5">

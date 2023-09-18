@@ -37,11 +37,11 @@ function ProfileForm() {
     }
   }, [user]);
 
-  if (!ready) {
-    return <div className="mt-12">
-      <Loader/>
-    </div>;
-  }
+  // if (!ready) {
+  //   return <div className="mt-12">
+  //     <Loader/>
+  //   </div>;
+  // }
   function getInput(e) {
     e.preventDefault();
     const { name, value } = e.target;
@@ -71,7 +71,7 @@ function ProfileForm() {
 
   }
 
-  if(redirect && ready){
+  if(redirect ){
     return <Navigate to={"/home"}/>
   }
 

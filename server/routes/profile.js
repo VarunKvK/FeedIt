@@ -13,7 +13,6 @@ profileRoute.get("/profile",async(req,res)=>{
         jwt.verify(Token,jwtSecret,{},async(err,data)=>{
             if(err)throw(err);
             res.json(data)
-        console.log("Profile",data)
         })
     }else{
         console.log("null")

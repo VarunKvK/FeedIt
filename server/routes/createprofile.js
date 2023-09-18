@@ -24,7 +24,6 @@ createprofileRoute
         try {
           const id = data.id;
           const Data = await Profile.find({ owner: id });
-        console.log("CreateProfile",Data)
           res.json(Data);
         } catch (err) {
           console.log(err);

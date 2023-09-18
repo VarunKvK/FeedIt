@@ -4,7 +4,7 @@ const MasonryLayout = ({ Data }) => {
   return (
     <div className="h-[25rem] relative w-[18rem] rounded-xl cursor-pointer mb-8">
       <img
-        src={"http://localhost:8000/uploads/art/" + Data?.art}
+        src={"https://feeditapp.onrender.com/uploads/art/" + Data?.art}
         className="h-full object-cover absolute w-[18rem] rounded-xl"
       />
       <div className="bg-[#1e1e1e41] opacity-[0%] hover:opacity-[100%] h-[25rem] relative w-[18rem] rounded-xl transition-opacity duration-100 ease-in">

@@ -23,7 +23,7 @@ function UserPage() {
           <div className="h-[15rem] w-[60%] relative mt-5 rounded-xl flex justify-center items-center shadow-md bg-[#D84339]">
             <img
               className="object-cover h-full w-full rounded-xl"
-              src={`http://localhost:8000/uploads/thumb/${profile?.[0].owner?.thumbphotos}`}
+              src={`https://feeditapp.onrender.com/uploads/thumb/${profile?.[0].owner?.thumbphotos}`}
               alt=""
             />
           </div>
@@ -34,7 +34,7 @@ function UserPage() {
           <div className="h-[5rem] w-[5rem] rounded-full shadow-lg bg-[#a7a7a7] absolute bottom-8 flex justify-center items-center">
             <img
               className="object-cover h-full w-full rounded-full"
-              src={`http://localhost:8000/uploads/profile/${profile?.[0].owner?.profilephotos}`}
+              src={`https://feeditapp.onrender.com/uploads/profile/${profile?.[0].owner?.profilephotos}`}
               alt=""
             />
           </div>
