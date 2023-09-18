@@ -25,9 +25,9 @@ loginRoute.post("/login",async(req,res)=>{
                console.error('Error signing JWT:', err);
                res.status(500).json({ error: 'Internal Server Error' });
              } else {
-               res.cookie('Token', token).json(userExists);
+               res.cookie('Token', token, { httpOnly: true, secure: true }).json(userExists);
                console.log(token)
-             }
+            }
          })
       }
       else{

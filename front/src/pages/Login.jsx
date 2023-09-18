@@ -27,8 +27,9 @@ function Login() {
         PASSWORD: input.Password,
       })
       .then(() =>{ setReg(true)
+        if(!ready && !user){
           window.location.href="/home"
-  
+        }
     });
   }
 
