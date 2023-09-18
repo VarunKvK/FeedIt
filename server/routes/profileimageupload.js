@@ -3,7 +3,7 @@ const multer=require("multer")
 const fs=require("fs")
 const sharp = require('sharp');
 
-const multerMiddle=multer({dest:"uploads/profile"})
+const multerMiddle=multer({dest:"https://feeditapp.onrender.com/uploads/profile"})
 
 const profileuploadRoute=express.Router()
 
