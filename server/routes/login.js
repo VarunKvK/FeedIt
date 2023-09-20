@@ -26,7 +26,6 @@ loginRoute.post("/login",async(req,res)=>{
                res.status(500).json({ error: 'Internal Server Error' });
              } else {
                res.cookie('Token', token, { httpOnly: true, secure: true, sameSite: 'None' }).json(userExists);
-               console.log(token)
             }
          })
       }
