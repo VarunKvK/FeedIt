@@ -77,7 +77,7 @@ function NavBar() {
               </Link>
             )}
           </div>
-          <div className="w-[40%] border-[1px] border-[#D84339] relative left-[3rem] flex items-center  rounded-2xl md:w-[30%]">
+          <div className="w-[40%] border-[1px] border-[#D84339] relative left-[2rem] flex items-center  rounded-2xl md:w-[30%]">
             <Search className="transform -translate-y-1/2 text-gray-500 absolute top-1/2 left-3" />
             <input
               value={searchValue}

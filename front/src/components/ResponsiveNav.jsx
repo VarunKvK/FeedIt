@@ -16,7 +16,7 @@ function ResponsiveNav({ setclose, open, setmenuclose, Logout }) {
 
   return (
     <div>
-      <div
+      {user? (<div
         onClick={() => {
           setclose(true);
           setmenuclose(false);
@@ -24,7 +24,7 @@ function ResponsiveNav({ setclose, open, setmenuclose, Logout }) {
         className="block relative left-5 md:hidden cursor-pointer"
       >
         <MenuIcon />
-      </div>
+      </div>):null}
       {open ? (
         <div
           className={
